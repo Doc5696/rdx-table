@@ -4,12 +4,6 @@ import Table from '../Table';
 import MainWrapper from './styles/MainWrapper';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
   
   componentWillMount() {
     this.props.getUsersData();
