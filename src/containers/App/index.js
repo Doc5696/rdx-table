@@ -4,18 +4,15 @@ import Table from '../Table';
 import MainWrapper from './styles/MainWrapper';
 
 class App extends React.Component {
-  
-  componentWillMount() {
-    this.props.getUsersData();
-  }
 
   render() {
     const dataLables = this.props.usersData.lables;
     const dataResults = this.props.usersData.results;
+    const getUsersData = this.props.getUsersData;
     return(
       <MainWrapper>
         <Header lables={dataLables} />
-        <Table lables={dataLables} results={dataResults} />
+        <Table getUsersData={getUsersData} lables={dataLables} results={dataResults} />
       </MainWrapper>
     );
   }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const MainTable = styled.table`
   display: flex;
   flex-flow: column;
-  height: 100%;
+  height: calc(95% - 30px);
   width: 100%;
   thead{
     flex: 0 0 auto;
