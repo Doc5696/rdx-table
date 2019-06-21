@@ -15,6 +15,7 @@ class Table extends React.Component {
   }
 
   componentWillMount() {
+    this.props.getLables();
     this.props.getUsersData();
   }
 
@@ -27,14 +28,12 @@ class Table extends React.Component {
 
   render() {
     const { currentPage, itemsPerPage } = this.state;
-
     const lables = this.props.lables; // Object
 
     const recievedLables = lables.map(lable => {
       // Array of lables
       return lable.dataKey;
     });
-
     const results = this.props.results; // Array of objects
 
     // Logic of pagination
