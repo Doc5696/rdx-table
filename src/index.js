@@ -10,6 +10,6 @@ ReactDOM.render(
     <BrowserRouter>
       <Route path={['/home', '/']} component={App} />
     </BrowserRouter>
-  </Provider>
-  ,document.getElementById('root')
+  </Provider>,
+  document.getElementById('root')
 );

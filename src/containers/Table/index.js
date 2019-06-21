@@ -26,17 +26,16 @@ class Table extends React.Component {
   }
 
   render() {
+    const { currentPage, itemsPerPage } = this.state;
 
-    const {currentPage, itemsPerPage} = this.state;
+    const lables = this.props.lables; // Object
 
-    const lables = this.props.lables; // Object 
-
-    const recievedLables = lables.map(lable => {  // Array of lables
+    const recievedLables = lables.map(lable => {
+      // Array of lables
       return lable.dataKey;
     });
 
     const results = this.props.results; // Array of objects
-
 
     // Logic of pagination
 
@@ -56,34 +55,34 @@ class Table extends React.Component {
       } else {
         isActive = 'normal';
       }
-      return(
+      return (
         <button
           className={isActive}
           key={number}
           id={number}
           onClick={this.handleClick}>
           {number}
-        </button>);}
-    );
+        </button>
+      );
+    });
 
-    return(
+    return (
       <TableContainer>
         <MainTable>
           <thead>
             <TableTitleRow lables={lables} />
           </thead>
           <tbody>
-            {currentItems.map(dataItem =>
+            {currentItems.map(dataItem => (
               <TableRow
                 recievedLables={recievedLables}
                 dataItem={dataItem}
-                key={dataItem.id} />
-            )}
+                key={dataItem.id}
+              />
+            ))}
           </tbody>
         </MainTable>
-        <div className='buttons'>
-          {renderButtons}
-        </div>
+        <div className="buttons">{renderButtons}</div>
       </TableContainer>
     );
   }

@@ -1,6 +1,6 @@
-import {connect} from 'react-redux';
-import {withRouter} from 'react-router';
-import {getUsersData} from '../../store/services/users.service';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import { getUsersData } from '../../store/services/users.service';
 import App from './index';
 
 const mapStateToProps = state => {

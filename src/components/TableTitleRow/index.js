@@ -3,13 +3,13 @@ import TableTitle from './styles/TableTitle';
 import TableItem from '../TableItem';
 
 function TableTitleRow(props) {
-  
   const lables = props.lables;
 
-  return(
+  return (
     <TableTitle>
-      {lables.map(lable =>
-        <TableItem item={lable.lable} key={lable.id} />)}
+      {lables.map(lable => (
+        <TableItem item={lable.lable} key={lable.id} />
+      ))}
     </TableTitle>
   );
 }

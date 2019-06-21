@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const TableR = styled.tr`
-  td{
+  td {
     padding: 5px 15px;
   }
-  &:nth-child(odd){
+  &:nth-child(odd) {
     background: #eee;
   }
 `;
