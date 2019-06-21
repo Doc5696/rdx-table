@@ -7,16 +7,17 @@ const initialState = {
 
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
-  case types.GET_USERS_DATA: {
-    return {
-      ...state,
-      results: action.payload
-    };
-  }
+  //  Lables
   case types.GET_LABLES: {
     return {
       ...state,
       lables: action.payload
+    };
+  }
+  case types.GET_USERS_DATA: {
+    return {
+      ...state,
+      results: action.payload
     };
   }
   default:

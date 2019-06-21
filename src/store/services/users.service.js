@@ -1,8 +1,11 @@
 import axios from 'axios';
-import { GetUsersData, GetLables } from '../actions/users.actions';
 
-export const getUsersData = () => async dispatch => {
-  const response = await axios.get('/someData.json');
-  dispatch(GetLables(response.data.lables));
-  dispatch(GetUsersData(response.data.results));
+export const getUsersData = results => {
+  return axios.get('/someData.json').then(responce => responce.results);
+};
+// getUsersData
+// getLables
+
+export const getLables = lables => {
+  return axios.get('/someData.json').then(responce => responce.lables);
 };
